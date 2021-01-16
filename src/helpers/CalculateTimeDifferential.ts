@@ -5,8 +5,11 @@ const calculateTimeDifferential = (timeMachine:TimeMachine) => {
     /**
      * CALC
      */
+    let timeBalance = calculateTimeBalance(timeMachine)
+    const TimeDifferential = timeBalance.year * 365 * 24 + timeBalance.month * 30 * 24 + timeBalance.day * 24
 
-    return 0;
+    return TimeDifferential;
+
 }
 
 export default calculateTimeDifferential;
